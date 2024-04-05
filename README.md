@@ -94,4 +94,5 @@ Some Example of CID
 
 We use some codes from repositories including [MAE](https://github.com/facebookresearch/mae)
 
-### License 
+### License
+This project is under the MIT license. See [LICENSE](./LICENSE) for details.

@@ -16,7 +16,7 @@ Statistical Overview of CID
     </tr>
     <tr>
     <th colspan=2 >Defect-free Image</th>
-        <!-- bgcolor=#ffffcc -->
+        <!-- bgcolor=#ffffcc-->
         <td>3900</td>
         <td>0</td>
         <td>0</td>
@@ -77,25 +77,24 @@ The training dataset should only contain defect-free samples, which should be na
 The test dataset should include one category named 'good' for defect-free samples, and any other subcategories of defect samples. It should be made as follows:
 
 ```shell
-Name_of_Dataset
-|-- Insulator
-|-----|----- ground_truth
-|-----|--------|------ teat_all
-|-----|--------|------ test_real
-|-----|--------|------ test_sim
-|-----|----- test_all
-|-----|--------|------ good
-|-----|--------|------ ...
-|-----|--------|------ ...
-|-----|----- test_real
-|-----|--------|------ good
-|-----|--------|------ ...
-|-----|--------|------ ...
-|-----|----- test_sim
-|-----|--------|------ ...
-|-----|--------|------ ...
-|-----|----- train
-|-----|--------|------ good
+Insulator
+|--- ground_truth
+|-----|------ teat_all
+|-----|------ test_real
+|-----|------ test_sim
+|--- test_all
+|-----|------ good
+|-----|------ ...
+|-----|------ ...
+|--- test_real
+|-----|------ good
+|-----|------ ...
+|-----|------ ...
+|--- test_sim
+|-----|------ ...
+|-----|------ ...
+|--- train
+|-----|------ good
 ```
 
 ### Environment
@@ -103,7 +102,7 @@ This repository is implemented and tested on Python 3.9 and PyTorch 1.10.
 To install requirements:
 
 ```setup
-pip install -r requirements.txt
+pip install-r requirements.txt
 ```
 
 ### Usage

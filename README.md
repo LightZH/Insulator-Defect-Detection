@@ -5,7 +5,7 @@ Official PyTorch Implementation of Catenary Insulator Defects Detection: A Datas
 Coming soon.
 
 ### Datasets
-CID: Download from [OverDrive]()
+Catenary Insulator Defect dataset (CID): Download from [OverDrive]()
 
 Statistical Overview of CID
 <table>

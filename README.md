@@ -77,24 +77,26 @@ The training dataset should only contain defect-free samples, which should be na
 The test dataset should include one category named 'good' for defect-free samples, and any other subcategories of defect samples. It should be made as follows:
 
 ```shell
-Insulator
-|--- ground_truth
-|-----|------ teat_all
+data
+|---- insulator
+|-----|------ ground_truth
+|-----|------|------ teat_all
+|-----|------|------ test_real
+|-----|------|------ test_sim
+|-----|------ test_all
+|-----|------|------ good
+|-----|------|------ ...
+|-----|------|------ ...
 |-----|------ test_real
+|-----|------|------ good
+|-----|------|------ ...
+|-----|------|------ ...
 |-----|------ test_sim
-|--- test_all
-|-----|------ good
-|-----|------ ...
-|-----|------ ...
-|--- test_real
-|-----|------ good
-|-----|------ ...
-|-----|------ ...
-|--- test_sim
-|-----|------ ...
-|-----|------ ...
-|--- train
-|-----|------ good
+|-----|------|------ good
+|-----|------|------ ...
+|-----|------|------ ...
+|-----|------ train
+|-----|------|------ good
 ```
 
 ### Environment
@@ -106,20 +108,35 @@ pip install-r requirements.txt
 ```
 
 ### Usage
-You can download the model checkpoints directly from [Checkpoints]()
-
 To train theMAE model, run:
 
 ```train
-python main_pretrain.py
+python train.py --batch_size 32 --epoch 2000 --model mae_vit_base_patch16 --output_dir ./checkpoints/insulator --log_dir ./checkpoints/insulator --data_path ./data/insulator --input_size 224 --blr 5e-3 --device_select 0
 ```
 
 To evaluate and test the model, run:
 
 ```eval
-python inference.py
+for w/o pre
+python inference.py --input_size=224 --mask_size=16 --test_fold="test_all" --save_dir ./results
+for w/ pre
+python inference.py --input_size=224 --mask_size=16 --test_fold="test_real" --save_dir ./results_pre
+for upper bound
+python inference.py --input_size=224 --mask_size=16 --test_fold="test_sim" --save_dir ./results_ub
 ```
 
+Before running, you can download the model checkpoints directly from [Checkpoints]()
+The checkpoints should be placed in the 'checkpoints' folder. It should be made as follows:
+```shell
+checkpoints
+|---- insulator
+|-----|------ 224-10.pth
+|-----|------ 224-20.pth
+|-----|------ 224.txt
+|-----|------ ...
+|-----|------ ...
+|-----|------ ...
+```
 
 ### Result
 Running the code as explained in this file should achieve the following results for CID:

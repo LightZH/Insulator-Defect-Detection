@@ -6,8 +6,8 @@ import numpy as np
 from PIL import Image
 from torchvision import transforms
 from scipy.ndimage import gaussian_filter
-from tools.run_test import run_main
-from tools.util import denormalize
+from util.run_test import run_main
+from util.util import denormalize
 
 
 def ssim_main(ori_path, save_path, reconst_path, device, model_mae, mask_image, mask_size, is_multiss=False):

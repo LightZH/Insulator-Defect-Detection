@@ -18,7 +18,7 @@ import timm
 import timm.optim.optim_factory as optim_factory
 assert timm.__version__ == "0.3.2"  # version check
 import models_mae
-from tools.remove_bad import remove
+from util.remove_bad import remove
 
 
 def get_args_parser():

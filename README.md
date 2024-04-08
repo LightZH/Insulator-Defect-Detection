@@ -120,9 +120,9 @@ To evaluate and test the model, run:
 for w/o pre
 python inference.py --input_size=224 --mask_size=16 --test_fold="test_all" --save_dir ./results
 for w/ pre
-python inference.py --input_size=224 --mask_size=16 --test_fold="test_real" --save_dir ./results_pre
+python inference_pre.py --input_size=224 --mask_size=16 --test_fold="test_real" --save_dir ./results_pre
 for upper bound
-python inference.py --input_size=224 --mask_size=16 --test_fold="test_sim" --save_dir ./results_ub
+python inference_ub.py --input_size=224 --mask_size=16 --test_fold="test_sim" --save_dir ./results_ub
 ```
 
 Before running, you can download the model checkpoints directly from [Checkpoints]()

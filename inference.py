@@ -5,11 +5,11 @@ import time
 import os
 from tqdm import tqdm
 import models_mae
-from tools.dataset import MyDataset
-from tools.run_test import run_main
-from tools.ssim import ssim_main
-from tools.util import blend, denormalize
-from tools.rocauc import rocauc
+from util.dataset import MyDataset
+from util.run_test import run_main
+from util.ssim import ssim_main
+from util.util import blend, denormalize
+from util.rocauc import rocauc
 
 
 def parse_args():

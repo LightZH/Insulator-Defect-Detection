@@ -3,7 +3,7 @@ Official PyTorch Implementation of Catenary Insulator Defects Detection: A Datas
 ![Framework](docs/overview.png)
 
 ### Datasets
-Catenary Insulator Defect dataset (CID): Download from [OverDrive]()
+Catenary Insulator Defect dataset (CID): Download from [[BaiDu]](https://pan.baidu.com/s/10rvDcGUXvNHSSc7Alcr7lA?pwd=30qh) [[Google Drive]](https://drive.google.com/drive/folders/1JW2-_LsmwQkYQkZ23zLAD124ZGNOAtkA?usp=sharing)
 
 Statistical Overview of CID
 <table>
@@ -72,7 +72,7 @@ Statistical Overview of CID
 Some Example of CID
 ![Figure](./docs/dataset.png)
 
-The dataset should be placed in the 'datasets' folder. 
+The dataset should be placed in the 'data' folder. 
 The training dataset should only contain defect-free samples, which should be named 'good'. 
 The test dataset should include one category named 'good' for defect-free samples, and any other subcategories of defect samples. It should be made as follows:
 
@@ -125,7 +125,7 @@ for upper bound
 python inference_ub.py --input_size=224 --mask_size=16 --test_fold="test_sim" --save_dir ./results_ub
 ```
 
-Before running, you can download the model checkpoints directly from [Checkpoints]()
+Before running, you can download the model checkpoints directly from [[BaiDu]](https://pan.baidu.com/s/1yZPldDMjOLWhA3Z4plT__w?pwd=xynr)
 The checkpoints should be placed in the 'checkpoints' folder. It should be made as follows:
 ```shell
 checkpoints

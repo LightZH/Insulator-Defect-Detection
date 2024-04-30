@@ -6,6 +6,7 @@ Official PyTorch Implementation of Catenary Insulator Defects Detection: A Datas
 Catenary Insulator Defect dataset (CID): Download from [[BaiDu]](https://pan.baidu.com/s/10rvDcGUXvNHSSc7Alcr7lA?pwd=30qh) [[Google Drive]](https://drive.google.com/drive/folders/1JW2-_LsmwQkYQkZ23zLAD124ZGNOAtkA?usp=sharing)
 
 Statistical Overview of CID
+
 <table>
     <tr>
         <th colspan=2></th>
@@ -126,6 +127,7 @@ python inference_ub.py --input_size=224 --mask_size=16 --test_fold="test_sim" --
 ```
 
 Before running, you can download the model checkpoints directly from [[BaiDu]](https://pan.baidu.com/s/1yZPldDMjOLWhA3Z4plT__w?pwd=xynr)
+
 The checkpoints should be placed in the 'checkpoints' folder. It should be made as follows:
 ```shell
 checkpoints
